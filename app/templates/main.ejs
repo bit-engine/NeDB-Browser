@@ -1,0 +1,71 @@
+<div id="main" class="grid">
+	<div class="row">
+		<div class="cell size12 app-bar bg-grayDark">
+			<a class="app-bar-element branding">NeDB Browser</a>
+			<ul class="app-bar-menu">
+				<li>
+				 	<a id="doCreateSource"><span class="mif-pencil"></span> Create</a>
+				</li>
+				<li>
+					<a id="doOpenSource"><span class="mif-folder-open"></span> Open</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="row cells12 browser-view">
+		<div class="cell colspan3 sideMenu bg-grayLighter block-shadow">
+			<h3 class="align-center">Sources</h3>
+			<div class="listview-outlook">
+				{{#each sources}}
+					<a class="list doSelectSource">
+						<div class="list-content">
+							<span class="list-title">{{name}}</span>	
+							<span class="list-subtitle">{{path}}</span>
+						</div>
+					</a>
+				{{/each}}
+			</div>
+		</div>
+		{{#if currentSource}}
+			<div class="cell colspan9">
+				<h3 class="place-right">{{records.length}} Total</h3>
+				<h3>{{currentSource}}</h3>
+				<div class="table-wrapper">
+					{{#if records.length}}
+						<table class="table striped hovered cell-hovered border bordered">
+							<thead>
+								<tr>
+									{{#each properties}}
+										<th>{{this}}</th>
+									{{/each}}
+								</tr>
+							</thead>
+							<tbody>
+								{{#each records}}
+									<tr>
+										{{#each this}}
+											<td>{{this}}</td>
+										{{/each}}
+									</tr>
+								{{/each}}
+							</tbody>
+						</table>
+					{{else}}
+						<h3 class="fg-steel align-center">Source is empty.</h3>
+					{{/if}}
+				</div>
+			</div>
+		{{else}}
+			<div class="cell colspan9 empty">
+				<h3 class="fg-steel align-center">No Source Selected</h3>
+			</div>
+		{{/if}}
+	</div>
+</div>
+<div id="create-dialog" data-role="dialog">
+	<h1>Create Source</h1>
+	<label>Source Name:</label>
+	<div class="input-control text">
+		<input type="text">
+	</div>
+</div>

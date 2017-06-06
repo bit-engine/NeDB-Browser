@@ -1,0 +1,31 @@
+{
+  "name": "nedb-browser",
+  "version": "0.0.1",
+  "description": "Simple Electron based browser for NeDB databases / datasources.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "build --dir",
+    "dist": "build",
+    "postinstall": "install-app-deps"
+  },
+  "keywords": [
+    "nedb",
+    "electron",
+    "browser",
+    "database"
+  ],
+  "author": "carlo-ev",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^1.6.7",
+    "electron-builder": "^17.5.0",
+    "nedb": "^1.8.0"
+  },
+  "build": {
+    "appId": "net.bitengine.nedbBrowser",
+    "map": {
+      "category": "utility"
+    }
+  }
+}

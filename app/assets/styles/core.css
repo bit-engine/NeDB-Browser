@@ -1,0 +1,103 @@
+html, body{
+	height: 100%;
+	width: 100%;
+}
+table.table thead{
+	border-bottom-color: #640024;
+}
+table.table thead tr th{
+	color: #222222;
+}
+table.hovered.cell-hovered tbody tr:hover{
+	background-color: rgba(154, 22, 22, 0.1);
+}
+table.hovered.cell-hovered tbody tr td:hover{
+	background-color: rgba(154, 22, 22, 0.3);
+}
+.source-selector{
+	background-color: white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.source-selector .row{
+	margin-top: 2.5rem;
+	margin-bottom: 2.5rem;
+}
+.source-selector .row .cell{
+	text-align: center;
+}
+
+
+#App, #App #main{
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+#App #main > .row{
+	margin: 0;
+}
+#App #main{
+	position: relative;
+}
+#App #main .app-bar a:hover{
+	background-color: #640024;
+}
+.browser-view{
+	position: absolute;
+	top: 3.2rem;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	padding: 0 2px;
+}
+.browser-view > .cell{
+	height: 100%;
+	overflow: auto;
+}
+.browser-view .sideMenu h3{
+	border-bottom: 2px solid #640024;
+	padding-bottom: 0.2rem;
+	margin-bottom: 0;
+}
+.browser-view .sideMenu .listview-outlook{
+	position: absolute;
+	top: 2.5rem;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	padding-bottom: 5rem;
+	overflow: auto;
+}
+.browser-view .sideMenu .listview-outlook .list{
+	cursor: pointer;
+	border-bottom-color: white;
+}
+.browser-view .sideMenu .listview-outlook .list.marked .list-content{
+	border-left-color: #640024;
+}
+.browser-view .sideMenu .listview-outlook .list:hover{
+	background-color: rgba(162,0,37,0.12);	
+}
+.browser-view .sideMenu .listview-outlook .list .list-subtitle{
+	color: #9a1616;
+}
+.browser-view .table-wrapper{
+	position: absolute;
+	top: 2.5rem;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	overflow: auto;
+}
+.browser-view .empty{
+	display: flex !important;
+	align-items: center;
+}
+.browser-view .empty h3{
+	width: 100%;
+}

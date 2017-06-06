@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NeDB Browser</title>
+
+	<script>
+		window.$ = window.jQuery = require("./assets/vendor/jquery.min.js");
+		window.Hammer = require("./assets/vendor/hammer.min.js");
+	</script>
+	<script src="./assets/vendor/metro.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="./assets/vendor/metro.min.css">
+	<link rel="stylesheet" type="text/css" href="./assets/styles/core.css">
+
+</head>
+<body>
+	<div class="source-selector">
+		<div class="row flex-just-center">
+			<div class="cell size11">
+				<img src="./assets/images/nedb_logo.png" />	
+			</div>
+		</div>
+		<div class="row flex-just-center">
+			<div class="cell size101">
+				<input id="doSelectFile" type="button" value="Select Source">	
+			</div>
+		</div>
+		<div class="row flex-just-center">
+			<div class="cell size11">
+				<input id="doExit" type="button" value="Exit">
+			</div>
+		</div>
+	</div>
+	<script src="controllers/SourceSelectorController.js"></script>
+</body>
+</html>
